@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Date;
 
@@ -20,7 +22,7 @@ public class CustomerDetails {
     private String userName;
     private String firstName;
     private String lastName;
-    private Date dob;
+    private String dob;
     private String contactNo;
     private String alernativeContactNo;
     private String email;

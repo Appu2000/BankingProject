@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/account")
 public class AccountController {
 
@@ -23,6 +24,9 @@ public class AccountController {
     public AccountDetails getByAccountNo(@PathVariable Long id){
         return accSer.getById(id);
     }
+
+    @GetMapping("/getall")
+    public List<AccountDetails> getAll(){return  accSer.getAll();}
 
     @GetMapping("/get/{username}")
     public List<AccountDetails> getByUserName(@PathVariable String username){

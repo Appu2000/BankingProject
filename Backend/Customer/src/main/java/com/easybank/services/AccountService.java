@@ -44,4 +44,8 @@ public class AccountService {
         accRepo.deleteById(id);
         return "deleted";
     }
+
+    public List<AccountDetails> getAll() {
+        return accRepo.findAll();
+    }
 }

@@ -12,16 +12,17 @@ import java.util.List;
 
 
 @RestController
+@CrossOrigin
 @RequestMapping("/customer")
 public class CustomerController {
 
     @Autowired
     private CustomerService profileService;
 
-    @PostMapping
-    public CustomerDetails addUser(@RequestBody CustomerDetails customerDetails){
-        return profileService.addUser(customerDetails);
-    }
+//    @PostMapping
+//    public CustomerDetails addUser(@RequestBody CustomerDetails customerDetails){
+//        return profileService.addUser(customerDetails);
+//    }
 
 
     @GetMapping("/view/{username}")

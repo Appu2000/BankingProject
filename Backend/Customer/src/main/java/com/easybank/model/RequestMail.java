@@ -9,25 +9,19 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.util.Date;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-public class TransactionDetails {
-
+public class RequestMail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long transactionId;
-    private Long accountNo;
-    private String transactionType;
-    private String subType;
-    private int amount;
-    private String source;
+    private Long id;
+    private String sender;
+    private String header;
+    private String content;
     private String status;
-    private String time;
-    private int balance;
 
 }
